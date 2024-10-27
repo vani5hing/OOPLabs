@@ -1,0 +1,22 @@
+Student: Nguyen Duc Kien - 20235597
+(there is a mindmap jpg because i don't know how to add both text and images into a pdf file)
+
+Accessor methods are used to control access to the private fields of a class
+(often reffer to Getters and Setters)
+
+Reading Assignment:  When should accessor methods be used?
+
+Answer:
+They should be used in the following scenarios:
+
+1. Encapsulation: If you want to enforce encapsulation and hide the implementation details of a class, accessor methods allow you to control how a class’s fields are accessed or modified. This keeps the internal representation hidden from other parts of the program, making future changes easier without impacting other code.
+
+2. Input Validation: Setters are often used to validate input before setting a variable. For instance, if a field represents age, a setter method can ensure that it only accepts positive integers. This is better than making the field public, as it prevents invalid data from being assigned directly.
+
+3. Read-Only or Write-Only Fields: Sometimes, you may want certain fields to be read-only or write-only. Using only a getter or only a setter lets you control the level of access to these fields.
+
+4. Lazy Initialization or Computed Properties: Accessor methods can add logic to retrieve or compute the value of a field only when it’s accessed (lazy initialization). This can improve performance and reduce memory usage if the field's value is expensive to compute.
+
+5. Consistency and Change Management: By using getters and setters, you create a single point of access for a field, which allows you to add functionality or modify the field’s behavior consistently. For instance, logging every time a variable is accessed or modified is easy to implement with getters and setters.
+
+6. Derived or Dependent Values: In cases where a field's value depends on other fields, accessor methods can help ensure that the dependent value is always updated and accurate when retrieved or set.

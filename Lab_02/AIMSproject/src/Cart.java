@@ -6,7 +6,7 @@ public class Cart {
 	
 	public void addDigitalVideoDisc(DigitalVideoDisc disc) {
 		if(qtyOrdered == MAX_NUMBER_ODERED) {
-			System.out.println("Remove success");
+			System.out.println("The cart is already full");
 		}
 		else {
 			itemsOrdered[qtyOrdered] = disc;
@@ -21,7 +21,9 @@ public class Cart {
 				itemsOrdered[i] = itemsOrdered[qtyOrdered - 1];
 				itemsOrdered[qtyOrdered - 1] = null;
 				qtyOrdered -= 1;
+				i--;
 			}
+			// O(n) complexity
 		}
 		System.out.println("Remove success");
 	}
